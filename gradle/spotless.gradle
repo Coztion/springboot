@@ -3,7 +3,7 @@ spotless {
         target('**/*.java')
         importOrder('java', 'javax', 'jakarta', 'org', 'com')
         removeUnusedImports()
-        googleJavaFormat().aosp()
+        palantirJavaFormat()
         indentWithSpaces(4)
         trimTrailingWhitespace()
         endWithNewline()
