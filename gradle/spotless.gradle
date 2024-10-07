@@ -1,0 +1,11 @@
+spotless {
+    java {
+        target('**/*.java')
+        importOrder('java', 'javax', 'jakarta', 'org', 'com')
+        removeUnusedImports()
+        googleJavaFormat().aosp()
+        indentWithSpaces(4)
+        trimTrailingWhitespace()
+        endWithNewline()
+    }
+}
