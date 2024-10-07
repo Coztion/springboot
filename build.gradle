@@ -43,28 +43,11 @@ dependencies {
     annotationProcessor "jakarta.persistence:jakarta.persistence-api"
 }
 
-def generated = 'src/main/generated'
-
-sourceSets {
-    main.java.srcDirs += "$projectDir/build/generated"
-}
-
 apply {
     from(rootProject.file('gradle/spotless.gradle'))
+    from(rootProject.file('gradle/querydsl.gradle'))
 }
 
 tasks.named('test') {
     useJUnitPlatform()
-}
-
-tasks.withType(JavaCompile).configureEach {
-    options.generatedSourceOutputDirectory = file(generated)
-}
-
-tasks.named('spotlessJava').configure {
-    dependsOn tasks.withType(JavaCompile)
-}
-
-clean {
-    delete file('src/main/generated')
 }

@@ -9,3 +9,7 @@ spotless {
         endWithNewline()
     }
 }
+
+tasks.named('spotlessJava').configure {
+    dependsOn tasks.withType(JavaCompile)
+}
