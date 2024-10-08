@@ -1,4 +1,4 @@
-package codesver.springboot.common.config;
+package codesver.springboot.config;
 
 import com.querydsl.jpa.impl.JPAQueryFactory;
 import jakarta.persistence.EntityManager;
