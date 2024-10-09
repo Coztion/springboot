@@ -15,5 +15,11 @@ spring:
       hibernate:
         format_sql: true
 
+  messages:
+    basename: internationalize/labels, internationalize/messages
+    encoding: UTF-8
+    fallback-to-system-locale: false
+    always-use-message-format: true
+
 mybatis:
   mapper-locations: classpath:mybatis/mapper/**/*.xml
