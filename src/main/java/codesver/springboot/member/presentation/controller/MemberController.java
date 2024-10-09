@@ -1,6 +1,6 @@
 package codesver.springboot.member.presentation.controller;
 
-import codesver.springboot.common.model.io.RestResponse;
+import codesver.springboot.common.io.RestResponse;
 import codesver.springboot.member.application.service.MemberService;
 import codesver.springboot.member.domain.Members;
 import codesver.springboot.member.presentation.model.request.MemberSearchRequest;
