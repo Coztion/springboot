@@ -1,4 +1,4 @@
-package codesver.springboot.domain.common.model;
+package codesver.springboot.domain.common.domain;
 
 import codesver.springboot.exception.ErrorCode;
 import codesver.springboot.exception.RestException;
@@ -7,7 +7,7 @@ import lombok.experimental.SuperBuilder;
 import org.springframework.util.CollectionUtils;
 
 @SuperBuilder
-public abstract class IterableOf<T> {
+public abstract class Iterable<T> {
 
     protected List<T> values;
 
