@@ -7,7 +7,9 @@ import lombok.Setter;
 @Getter
 @Setter
 @AllArgsConstructor(staticName = "of")
-public class RestResponse<T> {
+public class RestErrorResponse {
 
-    private T resource;
+    private int code;
+    private String name;
+    private String message;
 }
