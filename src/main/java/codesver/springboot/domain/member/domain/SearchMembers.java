@@ -6,8 +6,6 @@ import lombok.*;
 @Getter
 @Setter
 @Builder
-@NoArgsConstructor
-@AllArgsConstructor
 public class SearchMembers {
 
     private Set<Long> memberIds;
