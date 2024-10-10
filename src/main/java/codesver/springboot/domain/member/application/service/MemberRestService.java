@@ -15,7 +15,7 @@ public class MemberRestService implements MemberService {
 
     @Override
     @Transactional(readOnly = true)
-    public Members getMembers(MemberSearchCommand searchCommand) {
+    public Members searchMembers(MemberSearchCommand searchCommand) {
         return memberRepository.searchMembers(searchCommand.toDomain());
     }
 }

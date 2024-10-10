@@ -4,5 +4,5 @@ import codesver.springboot.domain.member.application.model.command.MemberSearchC
 import codesver.springboot.domain.member.domain.Members;
 
 public interface MemberService {
-    Members getMembers(MemberSearchCommand searchCommand);
+    Members searchMembers(MemberSearchCommand searchCommand);
 }

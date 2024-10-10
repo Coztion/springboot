@@ -20,7 +20,7 @@ public class MemberController {
 
     @GetMapping
     public RestResponse<MemberSearchResponse> searchMembers(@Valid MemberSearchRequest request) {
-        Members members = memberService.getMembers(request.toCommand());
+        Members members = memberService.searchMembers(request.toCommand());
         MemberSearchResponse response = MemberSearchResponse.from(members);
         return RestResponse.of(response);
     }
