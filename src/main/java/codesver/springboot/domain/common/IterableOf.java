@@ -1,4 +1,4 @@
-package codesver.springboot.util;
+package codesver.springboot.domain.common;
 
 import codesver.springboot.exception.ErrorCode;
 import codesver.springboot.exception.RestException;
