@@ -7,7 +7,7 @@ import lombok.experimental.SuperBuilder;
 import org.springframework.util.CollectionUtils;
 
 @SuperBuilder
-public class IterableOf<T> {
+public abstract class IterableOf<T> {
 
     protected List<T> values;
 
