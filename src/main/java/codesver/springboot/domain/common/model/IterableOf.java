@@ -28,10 +28,6 @@ public abstract class IterableOf<T> {
         return values.stream().findFirst().get();
     }
 
-    public boolean hasValue() {
-        return !CollectionUtils.isEmpty(values);
-    }
-
     public boolean isEmpty() {
         return CollectionUtils.isEmpty(values);
     }
