@@ -1,4 +1,4 @@
-package codesver.springboot.common.util;
+package codesver.springboot.util;
 
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;

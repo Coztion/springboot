@@ -1,4 +1,4 @@
-package codesver.springboot.common.util;
+package codesver.springboot.util;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.MessageSource;

@@ -1,7 +1,7 @@
-package codesver.springboot.common.exception;
+package codesver.springboot.exception;
 
-import codesver.springboot.common.util.ApplicationContextProvider;
-import codesver.springboot.common.util.MessageTranslator;
+import codesver.springboot.util.ApplicationContextProvider;
+import codesver.springboot.util.MessageTranslator;
 import lombok.Getter;
 
 @Getter

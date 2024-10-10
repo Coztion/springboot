@@ -1,6 +1,6 @@
 package codesver.springboot.domain.member.domain;
 
-import codesver.springboot.common.util.IterableOf;
+import codesver.springboot.util.IterableOf;
 import java.util.List;
 import lombok.experimental.SuperBuilder;
 

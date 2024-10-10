@@ -1,10 +1,10 @@
 package codesver.springboot.domain.member.presentation.controller;
 
-import codesver.springboot.common.io.RestResponse;
 import codesver.springboot.domain.member.application.service.MemberService;
 import codesver.springboot.domain.member.domain.Members;
 import codesver.springboot.domain.member.presentation.model.request.MemberSearchRequest;
 import codesver.springboot.domain.member.presentation.model.response.MemberSearchResponse;
+import codesver.springboot.io.RestResponse;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;

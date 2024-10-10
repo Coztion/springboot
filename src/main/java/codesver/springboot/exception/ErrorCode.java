@@ -1,4 +1,4 @@
-package codesver.springboot.common.exception;
+package codesver.springboot.exception;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;

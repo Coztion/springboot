@@ -1,4 +1,4 @@
-package codesver.springboot.common.util;
+package codesver.springboot.util;
 
 import java.util.List;
 import lombok.experimental.SuperBuilder;

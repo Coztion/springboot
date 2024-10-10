@@ -1,4 +1,4 @@
-package codesver.springboot.common.io;
+package codesver.springboot.io;
 
 import lombok.Data;
 import lombok.RequiredArgsConstructor;

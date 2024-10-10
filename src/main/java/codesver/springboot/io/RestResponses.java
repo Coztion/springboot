@@ -1,4 +1,4 @@
-package codesver.springboot.common.io;
+package codesver.springboot.io;
 
 import java.util.List;
 import lombok.Data;
