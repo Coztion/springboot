@@ -37,10 +37,8 @@ public class MemberRestRepository implements MemberRepository {
     @Override
     @Transactional
     public Members operateMembers(OperateMembers operate) {
-        // DELETE
         queryRepository.deleteMembers(operate.getDeleteMemberIds());
 
-        // UPDATE
         Map<Long, Member> updateMembers = operate.getUpdateMemberMap();
         List<MemberEntity> updateMemberEntities = queryRepository.searchMembers(
                 operate.getUpdateMemberIds(), Collections.emptySet(), Collections.emptySet());
@@ -49,13 +47,11 @@ public class MemberRestRepository implements MemberRepository {
             memberEntity.update(member);
         }
 
-        // CREATE
         List<MemberEntity> createMemberEntities = operate.getCreateMembers().stream()
                 .map(MemberEntity::fromDomain)
                 .toList();
         createMemberEntities = jpaRepository.saveAll(createMemberEntities);
 
-        // RESULT
         List<Member> members = Stream.of(updateMemberEntities, createMemberEntities)
                 .flatMap(Collection::stream)
                 .map(MemberEntity::toDomain)
