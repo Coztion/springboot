@@ -21,4 +21,10 @@ public class MemberQueryRepository {
                 .where(member.memberId.in(memberIds), member.username.in(usernames), member.email.in(emails))
                 .fetch();
     }
+
+    public void deleteMembers(Set<Long> memberIds) {
+        QMemberEntity member = QMemberEntity.memberEntity;
+
+        query.delete(member).where(member.memberId.in(memberIds)).execute();
+    }
 }

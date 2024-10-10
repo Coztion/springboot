@@ -9,9 +9,9 @@ import lombok.experimental.SuperBuilder;
 @SuperBuilder
 public abstract class Operate<T> {
 
-    private T createTargets;
+    protected T createTargets;
 
-    private T updateTargets;
+    protected T updateTargets;
 
-    private T deleteTargets;
+    protected T deleteTargets;
 }
