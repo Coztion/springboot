@@ -3,7 +3,7 @@ package codesver.springboot.domain.member.infrastructure.repository;
 import codesver.springboot.domain.member.application.repository.MemberRepository;
 import codesver.springboot.domain.member.domain.Member;
 import codesver.springboot.domain.member.domain.Members;
-import codesver.springboot.domain.member.infrastructure.model.condition.MemberSearchCondition;
+import codesver.springboot.domain.member.domain.SearchMembers;
 import codesver.springboot.domain.member.infrastructure.model.entity.MemberEntity;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
@@ -18,9 +18,9 @@ public class MemberRestRepository implements MemberRepository {
 
     @Override
     @Transactional(readOnly = true)
-    public Members searchMembers(MemberSearchCondition condition) {
-        List<MemberEntity> memberEntities = queryRepository.searchMembers(
-                condition.getMemberIds(), condition.getUsernames(), condition.getEmails());
+    public Members searchMembers(SearchMembers search) {
+        List<MemberEntity> memberEntities =
+                queryRepository.searchMembers(search.getMemberIds(), search.getUsernames(), search.getEmails());
 
         List<Member> members =
                 memberEntities.stream().map(MemberEntity::toDomain).toList();
